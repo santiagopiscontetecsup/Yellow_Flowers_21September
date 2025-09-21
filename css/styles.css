@@ -1,0 +1,622 @@
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff9a00 0%, #ffcd00 25%, #ffd700 50%, #fff200 75%, #ffff99 100%);
+    position: relative;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Fondo de partículas animadas */
+.particles-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.3) 1px, transparent 1px),
+        radial-gradient(circle at 80% 80%, rgba(255, 193, 7, 0.3) 1px, transparent 1px),
+        radial-gradient(circle at 40% 60%, rgba(255, 235, 59, 0.3) 1px, transparent 1px);
+    background-size: 100px 100px, 150px 150px, 200px 200px;
+    animation: floatingParticles 20s infinite linear;
+    z-index: -1;
+}
+
+@keyframes floatingParticles {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-100px); }
+}
+
+/* Flores decorativas flotantes */
+.flower {
+    position: fixed;
+    font-size: 2rem;
+    animation: floating 6s ease-in-out infinite;
+    z-index: 1;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+}
+
+.flower-1 {
+    top: 10%;
+    left: 10%;
+    animation-delay: -1s;
+}
+
+.flower-2 {
+    top: 20%;
+    right: 15%;
+    animation-delay: -2s;
+}
+
+.flower-3 {
+    top: 60%;
+    left: 5%;
+    animation-delay: -3s;
+}
+
+.flower-4 {
+    bottom: 20%;
+    right: 10%;
+    animation-delay: -4s;
+}
+
+.flower-5 {
+    top: 80%;
+    left: 80%;
+    animation-delay: -5s;
+}
+
+.flower-6 {
+    top: 5%;
+    left: 50%;
+    animation-delay: -6s;
+}
+
+.flower-7 {
+    top: 30%;
+    right: 5%;
+    animation-delay: -7s;
+}
+
+.flower-8 {
+    top: 70%;
+    left: 20%;
+    animation-delay: -8s;
+}
+
+.flower-9 {
+    bottom: 10%;
+    left: 15%;
+    animation-delay: -9s;
+}
+
+.flower-10 {
+    top: 40%;
+    right: 25%;
+    animation-delay: -10s;
+}
+
+.flower-11 {
+    bottom: 30%;
+    right: 5%;
+    animation-delay: -11s;
+}
+
+.flower-12 {
+    top: 15%;
+    left: 85%;
+    animation-delay: -12s;
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
+
+/* Contenido principal */
+.main-content {
+    position: relative;
+    z-index: 10;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #8B4513;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.1),
+        0 0 20px rgba(255, 215, 0, 0.3);
+    margin-bottom: 1rem;
+    animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+    from {
+        text-shadow: 
+            2px 2px 4px rgba(0, 0, 0, 0.1),
+            0 0 20px rgba(255, 215, 0, 0.3);
+    }
+    to {
+        text-shadow: 
+            2px 2px 4px rgba(0, 0, 0, 0.1),
+            0 0 30px rgba(255, 215, 0, 0.6),
+            0 0 40px rgba(255, 193, 7, 0.4);
+    }
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #A0522D;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Sección del mensaje */
+.message-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.message-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 3rem;
+    max-width: 800px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 215, 0, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.message-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 215, 0, 0.3);
+}
+
+.message-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.flower-icon {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    animation: pulse 2s infinite;
+}
+
+/* Contenedor del girasol dibujado */
+.sunflower-container {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+#main-sunflower {
+    border-radius: 50%;
+    box-shadow: 
+        0 10px 30px rgba(255, 215, 0, 0.3),
+        inset 0 0 20px rgba(255, 215, 0, 0.1);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(255, 215, 0, 0.1));
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+#main-sunflower:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 15px 40px rgba(255, 215, 0, 0.4),
+        inset 0 0 30px rgba(255, 215, 0, 0.2);
+}
+
+.sunflower-controls {
+    margin-top: 1rem;
+}
+
+.draw-btn {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: #8B4513;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.draw-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+    background: linear-gradient(45deg, #FFA500, #FFD700);
+}
+
+.draw-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(255, 215, 0, 0.3);
+}
+
+.draw-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.draw-btn:hover::before {
+    left: 100%;
+}
+
+/* Animación de pulso para el girasol */
+@keyframes sunflowerPulse {
+    0% { 
+        transform: scale(1); 
+        box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3); 
+    }
+    50% { 
+        transform: scale(1.1); 
+        box-shadow: 0 20px 50px rgba(255, 215, 0, 0.6); 
+    }
+    100% { 
+        transform: scale(1); 
+        box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3); 
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.message-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #B8860B;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.message-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #5D4037;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.signature {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #DAA520;
+    margin-top: 2rem;
+    font-weight: 600;
+}
+
+/* Jardín interactivo */
+.interactive-garden {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    margin-top: 2rem;
+}
+
+.garden-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: #8B4513;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.garden-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.interactive-flower {
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 1rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.interactive-flower:hover {
+    transform: scale(1.2) rotate(360deg);
+    background: rgba(255, 215, 0, 0.3);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.interactive-flower::after {
+    content: attr(data-message);
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.interactive-flower:hover::after {
+    opacity: 1;
+    top: -50px;
+}
+
+.garden-instruction {
+    color: #8B4513;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* Pétalos cayendo */
+.falling-petals {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .message-card {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+    
+    .garden-container {
+        gap: 1rem;
+    }
+    
+    .interactive-flower {
+        font-size: 2rem;
+        padding: 0.5rem;
+    }
+    
+    .flower {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+    .garden-container {
+        gap: 1.5rem;
+        max-width: 400px;
+        margin: 2rem auto;
+    }
+    
+    .interactive-flower {
+        font-size: 2.3rem;
+        padding: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+    
+    .message-title {
+        font-size: 1.8rem;
+    }
+    
+    .message-text {
+        font-size: 1rem;
+    }
+    
+    .garden-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        justify-items: center;
+        max-width: 300px;
+        margin: 2rem auto;
+    }
+    
+    .interactive-flower {
+        font-size: 2.5rem;
+        padding: 0.8rem;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .garden-instruction {
+        text-align: center;
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
+    }
+}
+
+/* Footer con marca de agua del desarrollador */
+.developer-footer {
+    position: relative;
+    z-index: 10;
+    margin-top: 3rem;
+    padding: 2rem 0 3rem 0;
+    text-align: center;
+}
+
+.watermark {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 1.5rem 2.5rem;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.watermark:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 215, 0, 0.4);
+}
+
+.watermark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.watermark:hover::before {
+    left: 100%;
+}
+
+.dev-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    animation: devIconFloat 3s ease-in-out infinite;
+}
+
+@keyframes devIconFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-5px) rotate(5deg); }
+}
+
+.dev-name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #8B4513;
+    text-shadow: 
+        1px 1px 2px rgba(0, 0, 0, 0.1),
+        0 0 10px rgba(255, 215, 0, 0.3);
+    margin-bottom: 0.3rem;
+    letter-spacing: 1px;
+}
+
+.dev-subtitle {
+    font-size: 0.9rem;
+    color: #A0522D;
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Efectos adicionales en responsive */
+@media (max-width: 768px) {
+    .developer-footer {
+        padding: 1.5rem 1rem 2rem 1rem;
+        margin-top: 2rem;
+    }
+    
+    .watermark {
+        padding: 1rem 1.5rem;
+    }
+    
+    .dev-icon {
+        font-size: 1.5rem;
+    }
+    
+    .dev-name {
+        font-size: 1.4rem;
+    }
+    
+    .dev-subtitle {
+        font-size: 0.8rem;
+    }
+}

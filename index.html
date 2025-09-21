@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores Amarillas - PisconteDev</title>
+    <meta name="description" content="Una hermosa página dedicada a las flores amarillas con un mensaje especial">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="particles-background"></div>
+        
+        <div class="flower flower-1">🌻</div>
+        <div class="flower flower-2">🌻</div>
+        <div class="flower flower-3">🌻</div>
+        <div class="flower flower-4">🌻</div>
+        <div class="flower flower-5">🌻</div>
+        <div class="flower flower-6">🌻</div>
+        <div class="flower flower-7">🌻</div>
+        <div class="flower flower-8">🌻</div>
+        <div class="flower flower-9">🌻</div>
+        <div class="flower flower-10">🌻</div>
+        <div class="flower flower-11">🌻</div>
+        <div class="flower flower-12">🌻</div>
+        
+        <main class="main-content">
+            <header class="header">
+                <h1 class="title">Feliz Día de las Flores Amarillas</h1>
+            </header>
+            
+            <section class="message-section">
+                <div class="message-card">
+                    <div class="sunflower-container">
+                        <canvas id="main-sunflower" width="120" height="120"></canvas>
+                        <div class="sunflower-controls">
+                            <button id="draw-sunflower" class="draw-btn">🌻 Dibujar Girasol</button>
+                        </div>
+                    </div>
+                    <h2 class="message-title">De tu hermano :v</h2>
+                    <p class="message-text">
+                        Ya que no tienes a ningun pendejo que te de flores amarillas
+                        tienes a tu hermano que te las da :v (puedes darle click al boton las veces que quieras)
+                        para volver a dibujar, cuando acabe de dibujar le vuelves a hacer click :v
+                    </p>
+                    <div class="signature">
+                        Con cariño 💛
+                    </div>
+                </div>
+            </section>
+            
+            <section class="interactive-garden">
+                <h3 class="garden-title">Jardín Interactivo</h3>
+                <div class="garden-container">
+                    <div class="interactive-flower" data-message="¡Alegría!">🌻</div>
+                    <div class="interactive-flower" data-message="¡Esperanza!">🌼</div>
+                    <div class="interactive-flower" data-message="¡Amor!">🌻</div>
+                    <div class="interactive-flower" data-message="¡Felicidad!">🌼</div>
+                    <div class="interactive-flower" data-message="¡Paz!">🌻</div>
+                    <div class="interactive-flower" data-message="¡Gratitud!">🌼</div>
+                </div>
+                <p class="garden-instruction">Haz clic en las flores para descubrir su mensaje</p>
+            </section>
+        </main>
+        
+        <footer class="developer-footer">
+            <div class="watermark">
+                <span class="dev-icon">👨‍💻</span>
+                <span class="dev-name">PisconteDev</span>
+            </div>
+        </footer>
+        
+        <div class="falling-petals"></div>
+    </div>
+    
+    <script src="./js/sunflower-draw.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
